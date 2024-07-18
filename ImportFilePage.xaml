@@ -1,0 +1,11 @@
+﻿<Window x:Class="InventaireCannabis.ImportFilePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImportFilePage" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Upload from PC" Width="200" Height="50" Click="BtnUpload_Click"/>
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Window>
