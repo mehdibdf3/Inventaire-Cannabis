@@ -1,0 +1,58 @@
+﻿<Window x:Class="InventaireCannabis.ModifierPlantuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modifier Plantule" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <Label Content="État de santé"/>
+            <ComboBox x:Name="cbEtatSante" Width="200" Height="30" Margin="10" SelectedValuePath="Content">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="20" Height="20" Fill="{Binding}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+                <SolidColorBrush Color="Green"/>
+                <SolidColorBrush Color="Yellow"/>
+                <SolidColorBrush Color="Orange"/>
+                <SolidColorBrush Color="Red"/>
+            </ComboBox>
+
+            <Label Content="Entreposage"/>
+            <ComboBox x:Name="cbEntreposage" Width="200" Height="30" Margin="10">
+                <ComboBoxItem Content="F1260.04"/>
+                <ComboBoxItem Content="B3200"/>
+                <ComboBoxItem Content="B3080.01"/>
+                <ComboBoxItem Content="B3070"/>
+                <ComboBoxItem Content="F1260.01"/>
+                <ComboBoxItem Content="F1260.04"/>
+                <ComboBoxItem Content="B3320"/>
+            </ComboBox>
+
+            <Label Content="Raison de retrait"/>
+            <ComboBox x:Name="cbRetraitReason" Width="200" Height="30" Margin="10">
+                <ComboBoxItem Content="DESTRUCTION PAR AUTOCLAVE"/>
+                <ComboBoxItem Content="TRANSFERT CLIENT"/>
+                <ComboBoxItem Content="TRANSFERT AUTRE CENTRE"/>
+                <ComboBoxItem Content="AUTRE (INDIQUER LA RAISON DANS NOTE)"/>
+                <ComboBoxItem Content="TRANSFERT POUR ANALYSE"/>
+                <ComboBoxItem Content="ANALYSE"/>
+                <ComboBoxItem Content="CONTAMINATION"/>
+                <ComboBoxItem Content="LIMITATION DE LA LICENCE"/>
+                <ComboBoxItem Content="PERTE DE L'ÉCHANTILLION"/>
+                <ComboBoxItem Content="PLANTULES N'ONT PAS SURVÉCU À L'EXPÉRIENCE"/>
+                <ComboBoxItem Content="AUTRE (INDIQUER LA RAISON DANS NOTE)"/>
+            </ComboBox>
+
+            <Label Content="Date de retrait"/>
+            <DatePicker x:Name="dpDateRetrait" Width="200" Height="42" Margin="10"/>
+
+            <Label Content="Responsable décontamination"/>
+            <ComboBox x:Name="cbResponsableDecontamination" Width="200" Height="30" Margin="10"/>
+            <Button Content="Ajouter Nouveau Responsable" Width="200" Height="38" Click="BtnAjouterNouveauResponsable_Click"/>
+
+            <Button Content="Enregistrer" Width="200" Height="38" Click="BtnEnregistrer_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

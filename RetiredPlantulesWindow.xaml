@@ -1,0 +1,27 @@
+﻿<Window x:Class="InventaireCannabis.RetiredPlantulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RetiredPlantulesWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGridRetiredPlantules" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Plantule ID" Binding="{Binding PlantuleId}" Width="*"/>
+                <DataGridTextColumn Header="Date Arrivée" Binding="{Binding DateArrivee}" Width="*"/>
+                <DataGridTextColumn Header="État de Santé" Binding="{Binding EtatSante}" Width="*"/>
+                <DataGridTextColumn Header="Provenance" Binding="{Binding Provenance}" Width="*"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Stade" Binding="{Binding Stade}" Width="*"/>
+                <DataGridTextColumn Header="Entreposage" Binding="{Binding Entreposage}" Width="*"/>
+                <DataGridTextColumn Header="Note" Binding="{Binding Note}" Width="*"/>
+                <DataGridTextColumn Header="Date Retrait" Binding="{Binding DateRetrait}" Width="*"/>
+                <DataGridTemplateColumn Header="QR Code" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding QrCodeImage}" Width="50" Height="50"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
